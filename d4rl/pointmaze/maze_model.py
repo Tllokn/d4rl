@@ -166,6 +166,14 @@ U_MAZE2_MIRROR = \
         "#OOO#\\"+\
         "#####"
 
+DOWN_OPEN_MAZE = \
+        "#####\\"+\
+        "#OOO#\\"+\
+        "#OOO#\\"+\
+        "#OOO#\\"+\
+        "##G##\\"+\
+        "#####"
+
 
 class MazeEnv(mujoco_env.MujocoEnv, utils.EzPickle, offline_env.OfflineEnv):
     def __init__(self,
