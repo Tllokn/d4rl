@@ -271,7 +271,7 @@ class MuJoCoRenderer:
 #-----------------------------------------------------------------------------#
 
 MAZE_BOUNDS = {
-    'maze2d-down-dense-v0': (0, 5, 0, 6),
+    'maze2d-down-dense-v0': (0, 5, 0, 5),
     'maze2d-umaze2-v0': (0, 5, 0, 5),
     'maze2d-umaze2-mirror-v0': (0, 5, 0, 5),
     'maze2d-umaze-v1': (0, 5, 0, 5),

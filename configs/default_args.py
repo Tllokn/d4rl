@@ -12,23 +12,23 @@ class Args(ParamsProto):
     action_weight = 1
     batch_size = 32
 
-    maze_dataset = Proto('/data/maze2d/maze2d-down-dense-v0.hdf5',env="MAZE_DATASET",
+    maze_dataset = Proto('/data/maze2d/maze2d-open-v0.hdf5',env="MAZE_DATASET",
                      help="Path to maze dataset")
 
     bucket = None
     clip_denoised = True
     commit = None
     config = 'config.maze2d'
-    dataset = 'maze2d-down-dense-v0'
-    env_name = 'maze2d-down-dense-v0'
+    dataset = 'maze2d-open-v0'
+    env_name = 'maze2d-open-v0'
     device = 'cuda'
     diffusion = 'models.GaussianDiffusion'
     dim_mults = (1,4,8)
     ema_decay = 0.995
     exp_name = 'diffusion/H384_T256'
     gradient_accumulate_every = 2
-    horizon = 150
-    short_horizon = 150
+    horizon = 384
+    short_horizon = 384
     learning_rate = 0.0002
     loader = 'datasets.GoalDataset'
     logbase = 'logs'

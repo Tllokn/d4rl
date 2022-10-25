@@ -77,16 +77,18 @@ def maze2d_set_terminals(env):
         ##      at goal at time t and
         ##      not at goal at time t + 1
 
-        tmp = at_goal[:-1] * ~at_goal[1:]  # TEMP
-        tmp[-5:] = True # TEMP
-        timeouts[:-1] = tmp # TEMP
+        # tmp = at_goal[:-1] * ~at_goal[1:]  # TEMP
+        # tmp[-5:] = True # TEMP
+        # timeouts[:-1] = tmp # TEMP
 
-        # timeouts[:-1] = at_goal[:-1] * ~at_goal[1:]
+
+
+        timeouts[:-1] = at_goal[:-1] * ~at_goal[1:]
 
         timeout_steps = np.where(timeouts)[0]
         path_lengths = timeout_steps[1:] - timeout_steps[:-1]
 
-        # pdb.set_trace()
+
 
         print(
             f'[ utils/preprocessing ] Segmented {env.name} | {len(path_lengths)} paths | '

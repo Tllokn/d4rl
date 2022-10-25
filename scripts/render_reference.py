@@ -6,6 +6,7 @@ def main(__init_wandb=True):
     import torch
     from helper.utils.arrays import to_np
     import numpy as np
+    import pdb
 
     # Args._update(kwargs)
 
@@ -44,6 +45,8 @@ def main(__init_wandb=True):
 
         renderer = utils.Maze2dRenderer(env=Args.env_name)
 
+        pdb.set_trace()
+
         ## get a temporary dataloader to load a single batch
         dataloader_tmp = cycle(torch.utils.data.DataLoader(
             dataset, batch_size=batch_size, num_workers=1, shuffle=True, pin_memory=True
@@ -77,6 +80,8 @@ def main(__init_wandb=True):
         savepath = None
         images = renderer.composite(savepath, observations, ncol=10, env_name=Args.env_name)
         wandb.log({f"demonstration": wandb.Image(np.array(images), caption=f'demonstration')})
+
+    # pdb.set_trace()
 
     dataset, test_dataset = get_dataset(Args)
 

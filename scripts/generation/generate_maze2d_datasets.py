@@ -41,7 +41,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--render', action='store_true', help='Render trajectories')
     parser.add_argument('--noisy', action='store_true', help='Noisy actions')
-    parser.add_argument('--env_name', type=str, default='maze2d-down-dense-v0', help='Maze type')
+    # parser.add_argument('--env_name', type=str, default='maze2d-down-dense-v0', help='Maze type')
+    parser.add_argument('--env_name', type=str, default='maze2d-open-v0', help='Maze type')
     parser.add_argument('--num_samples', type=int, default=int(1e2), help='Num samples to collect')
     args = parser.parse_args()
 

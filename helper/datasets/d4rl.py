@@ -69,10 +69,8 @@ def sequence_dataset(env, preprocess_fn, add_extra_obs=False):
     """
     from configs.default_args import Args
 
-    # h5path = str(env)
-
-    if 'down' in str(env):
-        h5path = Args.maze_dataset
+    # h5path = Args.maze_dataset
+    h5path = None
 
     dataset = get_dataset(env, h5path=h5path)
     dataset = preprocess_fn(dataset)
